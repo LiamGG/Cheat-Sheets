@@ -10,6 +10,7 @@
 *Copying a file* - `cp <path_to_source> <destination>`
 
 *Symbolic Link* - `ln -s <source (files to link to)> <destination (new dir these files will be accessible from)>`
+  * Use full pathnames
 
 ## Applications
 *Install a program* - `sudo apt-get install <program name>`
