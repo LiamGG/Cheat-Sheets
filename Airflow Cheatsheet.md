@@ -2,24 +2,22 @@
 
 ## Running locally
 1. Create a Virtual Environment and activate it.
-2. Run `pip install -r Airflow/local.txt` to install Airflow requirements.
+2. Install Airflow requirements.
 3. In one terminal in the virtual env, run:
     ```
     export AIRFLOW_HOME=./templates  # this is wherever you want to put your dags
     export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-    export STAGE=staging
-    export=essencetech-prometheus-preprod
+    export ENV_VARIABLE1=1 # Set environment variables
 
     airflow initdb  # Only needs run the first time.
 
     airflow webserver -p 8080
     ```
-4. In anotbher terminal running the virtual env, run:
+4. In another terminal running the virtual env, run:
     ```
     export AIRFLOW_HOME=./templates # this is wherever you want to put your dags
     export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
-    export STAGE=staging
-    export=essencetech-prometheus-preprod
+    export ENV_VARIABLE1=1 # Set same environment variables
 
     airflow scheduler
     ```
